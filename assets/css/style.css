@@ -304,4 +304,8 @@ nav a:hover {
   .movie-details .main-poster {
     max-width: 300px;
   }
+
+   main {
+        padding-top: 200px;
+    }
 }
