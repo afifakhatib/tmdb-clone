@@ -1,77 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MovieHub</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
 
-<body>
-
+  <body>
     <header class="navbar">
-        <h1 class="logo">
-            <a href="index.html">MovieHub</a>
-        </h1>
+      <button class="menu-btn" id="menuBtn">☰</button>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="">Movies</a>
-            <a href="">TV Shows</a>
-        </nav>
+      <h1 class="logo">
+        <a href="index.html">MovieHub</a>
+      </h1>
 
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Search Movies....">
-        </div>
-        <button id="searchBtn">Search</button>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="">Movies</a>
+        <a href="">TV Shows</a>
+      </nav>
+
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search Movies...." />
+         <button id="searchBtn" class="search-icon">🔍</button>
+      </div>
+     
     </header>
 
+    <aside class="sidebar" id="sidebar">
+      <button class="close-btn" id="closeBtn">✕</button>
+
+      <h2>MovieHub</h2>
+
+      <a href="index.html">🏠 Home</a>
+      <a href="">🎬 Movies</a>
+      <a href="">📺 TV Shows</a>
+    </aside>
 
     <main>
+      <!-- hero section -->
+      <section class="hero">
+        <div class="hero-content">
+          <h2>Weclome to MovieHub</h2>
+          <p>
+            Discover movies , explore popular titles and find your next favorite
+            film.
+          </p>
+          <button class="explore-btn">Explore Movies</button>
+        </div>
+      </section>
 
-        <!-- hero section -->
-        <section class="hero">
-            <div class="hero-content">
-                <h2>
-                    Weclome to MovieHub
-                </h2>
-                <p>
-                    Discover movies , explore popular titles and
-                    find your next favorite film.
-                </p>
-                <button class="explore-btn">
-                    Explore Movies
-                </button>
-            </div>
-        </section>
+      <!-- Movies section -->
 
-                <!-- Movies section -->
+      <section class="movies-section">
+        <div class="container">
+          <h2>Popular Movies</h2>
 
-                <section class="movies-section">
-
-                    <div class="container">
-
-                        <h2>Popular Movies</h2>
-
-                        <div class="row" id="movieContainer">
-
-                            <!-- Movie cards will be added here -->
-
-                        </div>
-
-                    </div>
-
-                </section>
-                
+          <div class="row" id="movieContainer">
+            <!-- Movie cards will be added here -->
+          </div>
+        </div>
+      </section>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
     <script src="assets/js/app.js"></script>
-</body>
-
+  </body>
 </html>

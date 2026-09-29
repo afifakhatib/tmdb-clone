@@ -146,6 +146,19 @@ searchInput.addEventListener("keydown", (event) => {
   }
 });
 
+// side bar
+const menuBtn = document.getElementById("menuBtn");
+const closeBtn = document.getElementById("closeBtn");
+const sidebar = document.getElementById("sidebar");
+
+menuBtn.addEventListener("click", () => {
+  sidebar.classList.add("active");
+});
+
+closeBtn.addEventListener("click", () => {
+  sidebar.classList.remove("active");
+});
+
 //  <img src="${movie.image}" alt="${movie.title}">
 //                     <div class="movie-info">
 //                         <h3>${movie.title}</h3>
