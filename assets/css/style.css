@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* helper */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #111;
+  color: white;
+}
+
+input {
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+
+  background-color: #01b4e4;
+  color: white;
+
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* navbar */
+
+.navbar {
+  height: 70px;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #222;
+  position: fixed;
+  /* Keeps the navbar in place relative to the screen viewport */
+  top: 0;
+  /* Positions it at the very top edge */
+  left: 0;
+  /* Aligns it to the left edge */
+  width: 100%;
+  /* Ensures it spans the entire width of the page */
+  z-index: 1000;
+  /* Keeps it on top of other overlapping content */
+}
+
+.logo a {
+  color: #01b4e4;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a:hover {
+  color: #01b4e4;
+}
+
+/* search */
+
+.search-box {
+  display: flex;
+}
+
+/* hero */
+
+.hero {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba") center /
+      cover;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero h2 {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* movies */
+
+.movies-section {
+  padding: 40px 5%;
+}
+
+.movies-section h2 {
+  margin-bottom: 25px;
+}
+
+/* .movie-container {
+    display: gird;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 25px;
+} */
+
+/* movie card */
+
+.movie-card {
+  background-color: #222;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.movie-card:hover {
+  transform: translateY(-8px);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.movie-info {
+  padding: 10px;
+}
+
+.movie-info h3 {
+  margin-bottom: 10px;
+}
+
+.rating {
+  color: #ffd700;
+}
+
+/* =========================
+   Movie Details Page
+========================= */
+
+.movie-details {
+  min-height: calc(100vh - 70px);
+  padding: 100px 0 50px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.movie-details img {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: auto;
+}
+
+.movie-details h1 {
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.movie-details .rating {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.movie-details p {
+  color: #ccc;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.movie-details h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  /* color: #01b4e4; */
+  color: white;
+
+}
+
+.movie-details strong {
+  color: white;
+}
+
+.movie-details .btn-info {
+  background-color: #01b4e4;
+  border: none;
+  color: white;
+}
+
+.movie-details .btn-info:hover {
+  background-color: #0099c2;
+}
+
+/* Genre badges */
+
+.genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.genre-badge {
+  background-color: #01b4e4;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.similar-title {
+  margin-top: 60px;
+  margin-bottom: 25px;
+  color: white;
+}
+
+.similar-title {
+  color: white;
+}
+
+#similarMovies > div {
+  margin-bottom: 30px;
+}
+
+.click-details {
+  margin-top: 10px;
+  color: #01b4e4;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.movie-details .click-details {
+  margin-top: 10px;
+  color: #01b4e4;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.movie-details .click-details,
+.click-details {
+  margin-top: 10px;
+  color: #01b4e4;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.movie-card:hover .click-details {
+  opacity: 1;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+    padding: 20px;
+
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  .movie-details {
+    padding: 150px 30px 20px;
+  }
+
+  .movie-details h1 {
+    font-size: 32px;
+    margin-top: 25px;
+  }
+
+  .movie-details .main-poster {
+    max-width: 300px;
+  }
+}
